@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/half_rounded"/>
+
+        <TextView
+            android:id="@+id/textDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi Developer"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <View
+            android:layout_below="@+id/textDev"
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/bg_search"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_avatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="12dp"/>
+        
+        <LinearLayout
+            android:id="@+id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:elevation="50dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/SearchView"
+                app:iconifiedByDefault="true"
+                app:queryHint="Search"
+                app:queryBackground="@android:color/transparent"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_RV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_container"/>
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

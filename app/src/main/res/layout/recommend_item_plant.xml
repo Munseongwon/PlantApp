@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="200dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="40dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="20dp"
+    android:background="@drawable/featured_bg">
+
+    <ImageView
+        android:id="@+id/recommend_item_plant_picture"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recommend_item_plant_picture">
+
+        <TextView
+            android:id="@+id/recommend_item_plant_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/recommend_item_plant_price"
+            android:singleLine="true"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/recommend_item_plant_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$500"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/cadet_blue"/>
+
+        <TextView
+            android:id="@+id/recommend_item_plant_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommend_item_plant_title"
+            android:text="country"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
